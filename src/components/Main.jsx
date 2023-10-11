@@ -1,11 +1,15 @@
 import React from 'react'
+import Experience from "./subRoutes/Experience";
+
+import { Container } from '@mui/material';
 
 const Main = () => {
+ 
   return (
-    <div>
-      This is the main component of the homePage which contains templates.
-    </div>
+    <Container>
+    <Experience/>
+  </Container>
   )
 }
 
-export default Main
+export default Main;
