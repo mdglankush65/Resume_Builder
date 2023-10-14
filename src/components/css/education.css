@@ -1,0 +1,54 @@
+.Education-container {
+    margin-top: 4vw !important;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.university_degree {
+    display: flex;
+    align-items: center;
+}
+
+.university,
+degree {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.date_start_end {
+    display: flex;
+    align-items: center;
+}
+
+.date_start,
+date_end {
+    flex: 1;
+    margin-right: 10px;
+}
+
+/*------------------------button---------------------------------*/
+.Education_btn {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Edu_back-btn,
+.Edu_next-btn {
+    background-color: #0074d9;
+    color: #fff;
+    justify-content: space-between;
+}
+
+.Edu_back-btn:hover,
+.Edu_next-btn:hover {
+    background-color: #65d5ac;
+}
