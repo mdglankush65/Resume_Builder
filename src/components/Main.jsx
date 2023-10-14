@@ -19,9 +19,10 @@ const Main = () => {
       <Typography variant="h5" align="center" color="text.secondary" component="p">
         Explore our meticulously designed resume templates to effortlessly create a professional and eye-catching CV that stands out to potential employers.
       </Typography>
-      <Container sx={{display: `flex`}}>
+      {/* <Templates count={`1`} /> */}
+      {/* <Container sx={{display: `flex`}}>
         {array.map((val) => <Templates count={`${val}`} key={val} />)};
-      </Container>
+      </Container> */}
     </Container>
   )
 }

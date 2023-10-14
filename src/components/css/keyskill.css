@@ -1,0 +1,129 @@
+/* keyskill.css */
+
+.key-container {
+    margin-top: 4vw !important;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 700px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+/* Style the skill rows (two input fields in a row) */
+.skill-row {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the "Remove" button */
+.remove-button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: #cc0000;
+}
+
+/* Style the "Add New" button */
+.allbutton {
+    /* background-color: #0074d9; */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.allbutton .addnewbtn {
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056a2;
+}
+
+/* ---------------------------------- Back and Next buttons------------------ */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.back,
+.next {
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back:hover,
+.next:hover {
+    background-color: #0056a2;
+}
+
+
+/* --------------------------------make responsive for ------------------------ */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .key-container {
+        max-width: 100%;
+        margin-top: 2vw !important;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .skill-row {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input[type="text"] {
+        width: 70vw;
+        margin-right: 0;
+    }
+
+    .remove-button {
+        margin-top: 8px;
+    }
+
+
+
+
+}
