@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Templates from './Templates';
+import Templates from './Templates'; // Check the path to the Templates component
 
-const array=[1,2,3,4,5,6,7,8,9,10,12,13,14,15];
+const array = [1, 2, 3, 4];
+
 const Main = () => {
   return (
     <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
@@ -19,12 +20,12 @@ const Main = () => {
       <Typography variant="h5" align="center" color="text.secondary" component="p">
         Explore our meticulously designed resume templates to effortlessly create a professional and eye-catching CV that stands out to potential employers.
       </Typography>
-      {/* <Templates count={`1`} /> */}
-      {/* <Container sx={{display: `flex`}}>
-        {array.map((val) => <Templates count={`${val}`} key={val} />)};
-      </Container> */}
+      <Container sx={{ display: `flex` }}>
+        {array.map((val) => <Templates count={`${val}`} key={val} />)}
+        {/* Make sure the Templates component is correctly imported */}
+      </Container>
     </Container>
-  )
+  );
 }
 
-export default Main
+export default Main;
