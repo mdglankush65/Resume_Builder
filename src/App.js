@@ -1,24 +1,31 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Main from './components/Main';
+import MyResume from './components/MyResume';
+import About from './components/About';
+import NotFound from './NotFound'
 import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Info from './components/subRoutes/Info';
 import Education from './components/subRoutes/Education';
-import Keyskills from './components/subRoutes/Keyskill';
-import Work_exe from './components/subRoutes/Work_exe';
-
+import WorkExe from './components/subRoutes/Work_exe';
+import Keyskill from './components/subRoutes/Keyskill'
 function App() {
     return (
-        <div className="App">
+        <BrowserRouter>
             <Navbar />
-            {/* <Info /> */}
-            {/* <Education /> */}
-            {/* <Keyskills /> */}
-            {/* <Work_exe /> */}
-            <Main />
+            <Routes>
+                <Route path="/" element={<Main />} />
+                <Route path="myresumes" element={<MyResume />} />
+                <Route path="about" element={<About />} />
+                <Route path="experience" element={<WorkExe />} />
+                <Route path="info" element={<Info />} />
+                <Route path="education" element={<Education />} />
+                <Route path="keyskills" element={<Keyskill />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
             <Footer />
-        </div>
+        </BrowserRouter>
     );
 }
-
 export default App;

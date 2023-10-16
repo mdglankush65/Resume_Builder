@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
@@ -8,7 +9,7 @@ library.add(faTrash);
 
 function Keyskill() {
     const [skills, setSkills] = useState(['', '']);
-
+    const navigate = useNavigate();
     const addSkill = () => {
         setSkills([...skills, '']);
     };
@@ -48,8 +49,8 @@ function Keyskill() {
             <div className=' allbutton'>
                 <button onClick={addSkill} className='addnewbtn'>Add New</button>
                 <div className="button-container">
-                    <button className="back">Back</button>
-                    <button className="next">Next</button>
+                    <button className="back" onClick={() => navigate('/education')} >Back</button>
+                    <button className="next" onClick={() => navigate('/experience')} >Next</button>
                 </div>
             </div>
         </div>
