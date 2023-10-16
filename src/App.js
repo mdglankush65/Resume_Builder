@@ -8,8 +8,8 @@ import Footer from './components/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Info from './components/subRoutes/Info';
 import Education from './components/subRoutes/Education';
-import WorkExe from './components/subRoutes/Work_exe';
-import Keyskill from './components/subRoutes/Keyskill'
+import Work_exe from './components/subRoutes/Work_exe';
+import Keyskill from './components/subRoutes/Keyskill';
 function App() {
     return (
         <BrowserRouter>
