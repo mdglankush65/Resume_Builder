@@ -23,13 +23,13 @@ export default function Navbar() {
             >
                 <Toolbar sx={{ flexWrap: 'wrap' }}>
                     <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
-                        Resume Builder
+                        <Link href="/" color="text.primary" sx={{ my: 1, mx: 1.5, textDecoration: `none` }} >Resume Builder</Link>
                     </Typography>
                     <nav>
                         <Link
                             variant="button"
                             color="text.primary"
-                            href="#"
+                            href="/"
                             sx={{ my: 1, mx: 1.5, textDecoration: `none` }}
                         >
                             Resume Templates
@@ -37,7 +37,7 @@ export default function Navbar() {
                         <Link
                             variant="button"
                             color="text.primary"
-                            href="/MyResume"
+                            href="/myresumes"
                             sx={{ my: 1, mx: 1.5, textDecoration: `none` }}
                         >
                             My Resumes
@@ -45,7 +45,7 @@ export default function Navbar() {
                         <Link
                             variant="button"
                             color="text.primary"
-                            href="/About"
+                            href="/about"
                             sx={{ my: 1, mx: 1.5, textDecoration: `none` }}
                         >
                             About Us
