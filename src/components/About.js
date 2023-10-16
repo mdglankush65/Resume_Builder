@@ -1,5 +1,5 @@
 import React from "react";
-import "../components/styles/About.css";
+import "./../css/About.css";
 import { Stack, Typography, Box } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
@@ -14,27 +14,25 @@ const About = () => {
     window.open("https://www.facebook.com/");
   };
   const WhatsApp = () => {
-    window.open(" https://wa.me/12315464984");
+    window.open(" https://wa.me/+918307874565");
   };
   const Twitter = () => {
-    window.open("https://twitter.com/home");
+    window.open("https://x.com/mdglankush565?t=NHgoniFDE6PwXzawxv0xyw&s=09");
   };
   const Linkedin = () => {
-    window.open("https://www.linkedin.com/feed/");
+    window.open("https://www.linkedin.com/in/ankushmudgil");
   };
   const Email = () => {
-    window.open("mailto:ak804670@gmail.com");
+    window.open("mailto:mdglankush565@gmail.com");
   };
   const GitHub = () => {
-    window.open("https://github.com/");
+    window.open("https://github.com/mdglankush65");
   };
   const Instagram = () => {
-    window.open("https://www.instagram.com/");
+    window.open("https://www.instagram.com/_mr.mdgl/");
   };
   return (
     <>
-      {/* Main Content */}
-      <h2 className="header-title">Resume Builder</h2>
       <Stack p={{ xs: "15px", sm: "25px", md: "40px", lg: "60px " }}>
         <Stack
           className="midContainer"
