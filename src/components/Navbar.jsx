@@ -1,11 +1,12 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import CssBaseline from '@mui/material/CssBaseline';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
 import GlobalStyles from '@mui/material/GlobalStyles';
+import { Button } from '@mui/material';
 
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
@@ -22,33 +23,18 @@ export default function Navbar() {
         sx={{ borderBottom: (theme) => `0px solid ${theme.palette.divider}` }}
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
-          <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
-            Resume Builder
+          <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }} >
+            <Link to="/" style={{ color: 'black', textDecoration: 'none' }} >Resume Builder</Link>
           </Typography>
           <nav>
-            <Link
-              variant="button"
-              color="text.primary"
-              href="#"
-              sx={{ my: 1, mx: 1.5, textDecoration: `none` }}
-            >
-              Resume Templates
+            <Link to="/">
+              <Button variant="button" style={{ color: 'black' }} sx={{ my: 1, mx: 1, textDecoration: `none` }}>Resume Templates</Button>
             </Link>
-            <Link
-              variant="button"
-              color="text.primary"
-              href="/MyResume"
-              sx={{ my: 1, mx: 1.5, textDecoration: `none` }}
-            >
-              My Resumes
+            <Link to="my_resumes" >
+              <Button variant="button" style={{ color: 'black' }} sx={{ my: 1, mx: 1, textDecoration: `none` }}> My Resumes </Button>
             </Link>
-            <Link
-              variant="button"
-              color="text.primary"
-              href="/About"
-              sx={{ my: 1, mx: 1.5, textDecoration: `none` }}
-            >
-              About Us
+            <Link to="about">
+              <Button variant="button" sx={{ my: 1, mx: 1, textDecoration: `none` }} style={{ color: 'black' }} > About Us </Button>
             </Link>
           </nav>
         </Toolbar>

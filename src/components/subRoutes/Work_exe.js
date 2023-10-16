@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router';
 import './../../css/work_exe.css';
 
 const Work_exe = () => {
     const [experienceCount, setExperienceCount] = useState(1);
-
+    const navigate = useNavigate();
     const addExperience = () => {
         setExperienceCount(experienceCount + 1);
     };
@@ -62,8 +63,8 @@ const Work_exe = () => {
                 <button onClick={removeExperience} className='remove-btn'>Remove Experience</button>
             </div>
             <div className='next-back_btn'>
-                <button className='back-btn'>Back</button>
-                <button className='next-btn'>Next</button>
+                <button className='back-btn' onClick={()=>navigate('/keyskills')}>Back</button>
+                <button className='next-btn' onClick={()=> navigate('/myresumes')}>Next</button>
             </div>
 
         </div>

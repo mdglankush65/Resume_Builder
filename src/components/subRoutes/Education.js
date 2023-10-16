@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 import './../../css/education.css';
 
 const Education = () => {
+    const navigate = useNavigate();
     return (
         <div className='Education-container'>
             <div className='container1'>
@@ -33,8 +35,8 @@ const Education = () => {
                 </div>
             </div>
             <div className='Education_btn'>
-                <button className='Edu_back-btn'>Back</button>
-                <button className='Edu_next-btn'>Next</button>
+                <button className='Edu_back-btn' onClick={()=>navigate('/info')}>Back</button>
+                <button className='Edu_next-btn' onClick={()=>navigate('/keyskills')}>Next</button>
             </div>
         </div>
     );

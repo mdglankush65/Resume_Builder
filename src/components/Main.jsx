@@ -1,9 +1,9 @@
 import React from 'react'
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Templates from './Templates';
+// import Templates from './Templates';
 
-const array=[1,2,3,4,5,6,7,8,9,10,12,13,14,15];
+// const array=[1,2,3,4,5,6,7,8,9,10,12,13,14,15];
 const Main = () => {
   return (
     <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>

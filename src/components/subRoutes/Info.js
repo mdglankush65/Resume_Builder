@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './../../css/Info.css';
 import {
     Avatar,
     Container,
-    Typography,
     Button,
     Dialog,
     DialogTitle,
@@ -14,8 +14,6 @@ const Profile = ({ profilePhoto }) => {
     return (
         <Container maxWidth="sm" className="profile-container">
             <Avatar alt="User Profile" src={profilePhoto} sx={{ width: 150, height: 150, fontSize: '3rem' }} className="avatar" />
-            <Typography variant="h5" className="profile-text">
-            </Typography>
         </Container>
     );
 }
@@ -38,7 +36,7 @@ function Info() {
     const [isDialogOpen, setDialogOpen] = useState(false);
     const [selectedImageFile, setSelectedImageFile] = useState(null);
 
-
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -49,11 +47,11 @@ function Info() {
     };
 
     const handleBack = () => {
-        // Implement logic to go back to the previous step or page
+        navigate('/');
     };
 
     const handleNext = () => {
-        // Implement logic to go to the next step or page
+        navigate('/education');
     };
 
     const handleAvatarChange = () => {
@@ -142,7 +140,7 @@ function Info() {
             </form>
 
             <div className='back_next'>
-                <Button onClick={handleBack}>Back</Button>
+                <Button onClick={handleBack}>Cancel</Button>
                 <Button onClick={handleNext}>Next</Button>
             </div>
 
