@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useForm, Controller } from "react-hook-form";
 import {
   Button,
@@ -11,6 +12,7 @@ import {
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 const Keyskill = () => {
+  const navigate = useNavigate();
   const { control, handleSubmit, reset } = useForm();
   const [sections, setSections] = useState([{ id: 1, field: "Experience1" }]);
   const addNewSection = () => {
@@ -22,7 +24,6 @@ const Keyskill = () => {
     setSections(changeSection);
   };
   const onSubmit = (data) => {
-    console.log(data);
     reset();
   };
   return (
@@ -85,13 +86,14 @@ const Keyskill = () => {
       <Box sx={{ ml: 33, mt: 1, mb: 2, p: 2 }}
       style={{fontSize:'10px'}}>
         <Button variant="outlined" sx={{ px: 2,py:0.5 }}
-        style={{fontSize:'10px'}}>
+          style={{ fontSize: '10px' }} onClick={() => navigate('/education')} >
           Back
         </Button>
         <Button variant="contained" sx={{ ml: 2 ,px:2,py:0.5}}
         style={{fontSize:'10px'}}
+        onClick={()=>navigate('/experience')}
         >
-          Submit
+          Next
         </Button>
       </Box>
     </Box>
