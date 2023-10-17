@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './../../css/Info.css';
 import {
     Avatar,
@@ -37,7 +38,7 @@ function Info() {
 
     const [isDialogOpen, setDialogOpen] = useState(false);
     const [selectedImageFile, setSelectedImageFile] = useState(null);
-
+    const navigate = useNavigate();
 
 
     const handleChange = (e) => {
@@ -50,10 +51,12 @@ function Info() {
 
     const handleBack = () => {
         // Implement logic to go back to the previous step or page
+        navigate('/');
     };
 
     const handleNext = () => {
         // Implement logic to go to the next step or page
+        navigate('/education');
     };
 
     const handleAvatarChange = () => {

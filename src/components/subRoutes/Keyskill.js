@@ -73,7 +73,6 @@ const Keyskill = () => {
             </div>
           ))}
         </form>
-
       </Container>
       <Button
         variant="contained"
@@ -99,6 +98,3 @@ const Keyskill = () => {
   );
 };
 export default Keyskill;
-
-
-
