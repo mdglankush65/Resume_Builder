@@ -11,7 +11,7 @@ const StyledImage = styled('img')({
     opacity: '0.5',
   },
 });
-const ImageWithButton = React.memo (({ count }) => {
+const Templates = ({ index, count }) => {
   const navigate = useNavigate();
   const [isButtonVisible, setButtonVisible] = useState(false);
   const handleButtonClick = useCallback(() => {
@@ -40,25 +40,14 @@ const ImageWithButton = React.memo (({ count }) => {
             transform: 'translate(-50%, -50%)',
             '&:hover':{
               opacity:'0.2'
-            }
+            },
+            'width':'75%'
           }}
           onClick={handleButtonClick}
         >
-          Choose
+          Use Template
         </Button>
       )}
-    </div>
-  );
-});
-
-const Templates = () => {
-  // Assuming you have an array of template counts
-  const templateCounts = [1, 2, 3];
-  return (
-    <div>
-      {templateCounts.map((count,index) => (
-        <ImageWithButton key={index} count={count} />
-      ))}
     </div>
   );
 }
