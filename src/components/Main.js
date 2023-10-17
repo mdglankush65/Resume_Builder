@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Templates from './Templates'; // Check the path to the Templates component
@@ -21,9 +20,8 @@ const Main = () => {
       <Typography variant="h5" align="center" color="text.secondary" component="p">
         Explore our meticulously designed resume templates to effortlessly create a professional and eye-catching CV that stands out to potential employers.
       </Typography>
-      <Container sx={{ display: `flex` }}>
+      <Container sx={{ display: `flex`, flexWrap:"wrap", justifyContent:"space-between" }}>
         {array.map((val) => <Templates count={`${val}`} key={val} />)}
-        {/* Make sure the Templates component is correctly imported */}
       </Container>
     </Container>
   );
