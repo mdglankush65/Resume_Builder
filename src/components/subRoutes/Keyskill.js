@@ -85,11 +85,16 @@ const Keyskill = () => {
       </Button>
       <Box sx={{ ml: 2, mt: 1, mb: 2, p: 2 }}
       style={{fontSize:'10px'}}>
-        <Button variant="outlined" sx={{ px: 2.5,py:1}}
+        <Button variant="outlined" sx={{ 
+          "&:hover": {
+            backgroundColor: '#65d6ac', 
+          },px: 2.5,py:1}}
           style={{ fontSize: '10px' }} onClick={() => navigate('/education')} >
           Back
         </Button>
-        <Button variant="contained" sx={{ ml: 38 ,px:2.5,py:1}}
+        <Button variant="contained" sx={{"&:hover": {
+         backgroundColor: '#65d6ac',
+        }, ml: 38 ,px:2.5,py:1}}
         style={{fontSize:'10px'}}
         onClick={()=>navigate('/experience')}
         >

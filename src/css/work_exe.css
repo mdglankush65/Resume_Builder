@@ -94,10 +94,17 @@ button {
     background-color: red;
 }
 
-.back-btn,
+.back-btn{
+    background-color: 'white';
+    color:#0074d9;
+    border:1px solid #0074d9;
+}
 .next-btn {
-    background-color: blue;
-
+    background-color: #0074d9;
+}
+.back-btn:hover,
+.next-btn:hover{
+    background-color:#65d5ac
 }
 
 .add_remove_btn {
