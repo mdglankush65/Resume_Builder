@@ -31,9 +31,9 @@ const Keyskill = () => {
       component="form"
       sx={{
         width: 500,
-        ml: 60,
+        ml: 52,
         mt: 15,
-        boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.6)",
+        boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.3)",
       }}
     >
       <Container>
@@ -78,18 +78,18 @@ const Keyskill = () => {
       <Button
         variant="contained"
         onClick={addNewSection}
-        sx={{ ml: 25, mt: 2,px:2,py:0.5 }}
+        sx={{ ml: 25, mt: 2,px:2.5,py:0.5 }}
         style={{fontSize:'10px'}}
       >
         ADD NEW
       </Button>
-      <Box sx={{ ml: 33, mt: 1, mb: 2, p: 2 }}
+      <Box sx={{ ml: 2, mt: 1, mb: 2, p: 2 }}
       style={{fontSize:'10px'}}>
-        <Button variant="outlined" sx={{ px: 2,py:0.5 }}
+        <Button variant="outlined" sx={{ px: 2.5,py:1}}
           style={{ fontSize: '10px' }} onClick={() => navigate('/education')} >
           Back
         </Button>
-        <Button variant="contained" sx={{ ml: 2 ,px:2,py:0.5}}
+        <Button variant="contained" sx={{ ml: 38 ,px:2.5,py:1}}
         style={{fontSize:'10px'}}
         onClick={()=>navigate('/experience')}
         >
