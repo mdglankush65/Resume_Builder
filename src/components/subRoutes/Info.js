@@ -145,8 +145,8 @@ function Info() {
             </form>
 
             <div className='back_next'>
-                <Button onClick={handleBack}>Back</Button>
-                <Button onClick={handleNext}>Next</Button>
+                <Button variant="outlined" onClick={handleBack}>Back</Button>
+                <Button variant="contained" onClick={handleNext}>Next</Button>
             </div>
 
 

@@ -92,15 +92,6 @@ textarea {
     justify-content: space-between;
 }
 
-.back_next button {
-    background-color: #0074d9;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
 .back_next button:hover {
     background-color: #1bd57b;
 }
