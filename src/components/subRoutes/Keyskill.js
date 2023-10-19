@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm, Controller } from "react-hook-form";
+// import {add,remove} from '../../redux/slices/keyskills';
+// import {useSelector, useDispatch} from 'react-redux';
 import {
   Button,
   TextField,
@@ -28,7 +30,6 @@ const Keyskill = () => {
   };
   return (
     <Box
-      component="form"
       sx={{
         width: 500,
         ml: 52,
@@ -37,7 +38,7 @@ const Keyskill = () => {
       }}
     >
       <Container>
-        <Typography variant="4" gutterBottom="true">
+        <Typography variant="4" gutterBottom={true}>
           <span
             style={{ fontSize: "25px", fontWeight: "bold", marginTop: "60px" }}
           >
@@ -78,18 +79,18 @@ const Keyskill = () => {
       <Button
         variant="contained"
         onClick={addNewSection}
-        sx={{ ml: 25, mt: 2,px:2.5,py:0.5 }}
+        sx={{ ml: 25, mt: 2, px: 2.5, py: 0.5, "&:hover": { backgroundColor: '#65d5ac', } }}
         style={{fontSize:'10px'}}
       >
         ADD NEW
       </Button>
       <Box sx={{ ml: 2, mt: 1, mb: 2, p: 2 }}
       style={{fontSize:'10px'}}>
-        <Button variant="outlined" sx={{ px: 2.5,py:1}}
+        <Button variant="outlined" sx={{ px: 2.5, py: 1, "&:hover":{ backgroundColor: '#65d5ac', } }}
           style={{ fontSize: '10px' }} onClick={() => navigate('/education')} >
           Back
         </Button>
-        <Button variant="contained" sx={{ ml: 38 ,px:2.5,py:1}}
+        <Button variant="contained" sx={{ ml: 38, px: 2.5, py: 1, "&:hover": { backgroundColor: '#65d5ac', } }}
         style={{fontSize:'10px'}}
         onClick={()=>navigate('/experience')}
         >

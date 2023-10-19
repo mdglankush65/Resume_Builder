@@ -72,11 +72,13 @@ const About = () => {
             and delete them too.
             <ul>
               <li>Build Your Resume Fast and Easy with Following steps</li>
-              <ol>
-                <li>Select Templete</li>
-                <li>Fill deatils</li>
-                <li>Your Resume is ready to download</li>
-              </ol>
+              <li>
+                <ol>
+                  <li>Select Templete</li>
+                  <li>Fill deatils</li>
+                  <li>Your Resume is ready to download</li>
+                </ol>
+              </li>
             </ul>
           </Typography>
           <Stack sx={{ width: 500, height: 400 }}>
@@ -103,43 +105,43 @@ const About = () => {
           <Box className="icon">
             {/* Facebook share  */}
             <FacebookIcon
-              sx={{ fontSize: "40px", paddingLeft: "15px" }}
+              sx={{ fontSize: "40px", paddingLeft: "15px", cursor: 'pointer' }}
               onClick={Facebook}
               color="primary"
             />
             {/* whatsapp share  */}
             <WhatsAppIcon
-              sx={{ fontSize: "40px", paddingLeft: "15px" }}
+              sx={{ fontSize: "40px", paddingLeft: "15px", cursor: 'pointer' }}
               onClick={WhatsApp}
               color="success"
             />
             {/* twitter share  */}
             <TwitterIcon
-              sx={{ fontSize: "40px", paddingLeft: "15px" }}
+              sx={{ fontSize: "40px", paddingLeft: "15px", cursor: 'pointer' }}
               onClick={Twitter}
               color="info"
             />
             {/* linked share  */}
             <LinkedInIcon
-              sx={{ fontSize: "40px", paddingLeft: "15px" }}
+              sx={{ fontSize: "40px", paddingLeft: "15px", cursor: 'pointer' }}
               onClick={Linkedin}
               color="primary"
             />
             {/* email share  */}
             <EmailIcon
-              sx={{ fontSize: "40px", paddingLeft: "15px" }}
+              sx={{ fontSize: "40px", paddingLeft: "15px", cursor: 'pointer' }}
               onClick={Email}
               color="error"
             />
             {/* github share  */}
             <GitHubIcon
-              sx={{ fontSize: "40px", paddingLeft: "15px" }}
+              sx={{ fontSize: "40px", paddingLeft: "15px", cursor: 'pointer' }}
               onClick={GitHub}
               color="black"
             />
             {/* instagram share  */}
             <InstagramIcon
-              sx={{ fontSize: "40px", paddingLeft: "15px" }}
+              sx={{ fontSize: "40px", paddingLeft: "15px", cursor: 'pointer' }}
               onClick={Instagram}
               color="error"
             />
