@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+import { useDispatch,useSelector } from 'react-redux'; 
+import { changeInfo } from '../../redux/slices/info';
 import { useNavigate } from 'react-router-dom';
+import { initialState } from '../../redux/slices/info';
 import './../../css/Info.css';
 import {
     Avatar,
@@ -11,7 +14,7 @@ import {
     DialogContent,
 } from '@mui/material';
 
-const Profile = ({ profilePhoto }) => {
+const Profile = ({ profilePhoto = '/public/images/Avatar.jpeg' }) => {
     return (
         <Container maxWidth="sm" className="profile-container">
             <Avatar alt="User Profile" src={profilePhoto} sx={{ width: 150, height: 150, fontSize: '3rem' }} className="avatar" />
@@ -21,23 +24,12 @@ const Profile = ({ profilePhoto }) => {
     );
 }
 
-
 function Info() {
-    const [formData, setFormData] = useState({
-        profilePhoto: '',
-        firstName: '',
-        lastName: '',
-        email: '',
-        mobile: '',
-        address: '',
-        city: '',
-        state: '',
-        postalCode: '',
-        objective: '',
-    });
-
+    const information = useSelector(state=>state.information);
+    const [formData, setFormData] = useState(initialState)
+    const dispatch = useDispatch();
     const [isDialogOpen, setDialogOpen] = useState(false);
-    const [selectedImageFile, setSelectedImageFile] = useState(null);
+    const [selectedImageFile, setSelectedImageFile] = useState('/public/images/Avatar.jpeg');
     const navigate = useNavigate();
 
 
@@ -47,16 +39,16 @@ function Info() {
             ...formData,
             [name]: value,
         });
+        dispatch(changeInfo(formData));
     };
 
     const handleBack = () => {
-        // Implement logic to go back to the previous step or page
         navigate('/');
     };
 
     const handleNext = () => {
-        // Implement logic to go to the next step or page
         navigate('/education');
+        console.log(information);
     };
 
     const handleAvatarChange = () => {
@@ -65,7 +57,8 @@ function Info() {
 
     const handleImageUpload = (e) => {
         const file = e.target.files[0];
-        setSelectedImageFile(file);
+        if(file.size)
+            setSelectedImageFile(file);
     };
 
     const handleDialogClose = () => {
@@ -145,8 +138,8 @@ function Info() {
             </form>
 
             <div className='back_next'>
-                <Button variant="outlined" onClick={handleBack}>Back</Button>
-                <Button variant="contained" onClick={handleNext}>Next</Button>
+                <Button variant="outlined" onClick={handleBack} className='info_back'>Back</Button>
+                <Button variant="contained" onClick={handleNext} className='info_next'>Next</Button>
             </div>
 
 

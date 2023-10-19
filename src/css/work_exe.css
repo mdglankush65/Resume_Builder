@@ -94,12 +94,18 @@ button {
     background-color: red;
 }
 
-.back-btn,
+.back-btn{
+    background-color: #fff;
+    color:#0074d9;
+    border: 1px solid #0074d9;
+}
 .next-btn {
-    background-color: blue;
-
+    background-color: #0074d9;
 }
 
+.back-btn:hover,.next-btn:hover{
+    background-color: #65d5ac;
+}
 .add_remove_btn {
     display: flex;
     justify-content: space-between;
@@ -145,5 +151,9 @@ button {
         width: 45%;
         /* or any width you prefer */
         margin: 5px;
+    }
+    .add-btn:hover,.back-btn:hover{
+        background-color: #65d5ac;
+        color:#0074d9;
     }
 }

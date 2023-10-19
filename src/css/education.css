@@ -47,7 +47,11 @@ date_end {
     color: #fff;
     justify-content: space-between;
 }
-
+.Edu_back-btn{
+    background-color: #fff;
+    color: #0074d9;
+    border:1px solid #0074d9;
+}
 .Edu_back-btn:hover,
 .Edu_next-btn:hover {
     background-color: #65d5ac;
